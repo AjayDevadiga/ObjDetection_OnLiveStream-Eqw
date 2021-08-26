@@ -102,10 +102,14 @@ def Stopprocess():
 #         # return send_from_directory(loc, obj)
 #     except Exception as e:
 #         return str(e)
+@app.route('/favicon.ico')
+def favicon():
+    return send_from_directory(os.path.join(app.root_path, 'static'),
+                               'favicon.ico', mimetype='image/vnd.microsoft.icon')
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=False)
 
     with open(JSON_FLAG_FILE, "r") as jsonFile:
         Flag_data = json.load(jsonFile)
