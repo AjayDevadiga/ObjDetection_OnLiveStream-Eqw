@@ -102,7 +102,7 @@ def Stopprocess():
 #         # return send_from_directory(loc, obj)
 #     except Exception as e:
 #         return str(e)
-@app.route('/favicon.ico')
+@app.route('/favicon.ico', methods=['GET'])
 def favicon():
     return send_from_directory(os.path.join(app.root_path, 'static'),
                                'favicon.ico', mimetype='image/vnd.microsoft.icon')
