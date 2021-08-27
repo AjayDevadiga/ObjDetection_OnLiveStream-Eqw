@@ -7,6 +7,7 @@ import subprocess
 from Obj_Detection_Equations_work import Run_Obj_Detect
 from detect import PassImages
 import cv2
+from waitress import serve
 
 app = Flask(__name__)
 
@@ -109,7 +110,8 @@ def favicon():
 
 
 if __name__ == '__main__':
-    app.run(debug=False)
+    #app.run(debug=False)
+    serve(app, host='https://live-stream-obj-detection-eqw.herokuapp.com', port=80)
 
     with open(JSON_FLAG_FILE, "r") as jsonFile:
         Flag_data = json.load(jsonFile)
