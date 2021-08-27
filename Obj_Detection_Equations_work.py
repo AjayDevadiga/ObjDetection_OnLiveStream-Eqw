@@ -1,30 +1,30 @@
 from detect import run
 
 # Local
-Local_video = "data/images/Road_Traffic2_short.mp4"
+# Local_video = "data/images/Road_Traffic2_short.mp4"
 
-# Indonesia, 	Bekasi.
-Indonesia_Bekasi = "http://209.143.54.211:80/mjpg/video.mjpg"
+# # Indonesia, 	Bekasi.
+# Indonesia_Bekasi = "http://209.143.54.211:80/mjpg/video.mjpg"
 
-# Netherlands, Zeeland
-Netherlands_Zeeland =  "http://217.63.79.153:8081/cgi-bin/faststream.jpg?stream=half&fps=15&rand=COUNTER"
+# # Netherlands, Zeeland
+# Netherlands_Zeeland =  "http://217.63.79.153:8081/cgi-bin/faststream.jpg?stream=half&fps=15&rand=COUNTER"
 
-# Germany, 	Essen.
-Germany_Essen = "http://178.203.165.119:8082/mjpg/video.mjpg"
+# # Germany, 	Essen.
+# Germany_Essen = "http://178.203.165.119:8082/mjpg/video.mjpg"
 
-# United States, Jackson stream Youtube Stream
-United_States_Jackson = "https://youtu.be/FmoclK_hKz8"
+# # United States, Jackson stream Youtube Stream
+# United_States_Jackson = "https://youtu.be/FmoclK_hKz8"
 
-# Karnataka, Banglore
-Karnataka_Banglore = "http://117.192.41.101:81/jpgmulreq/1/image.jpg?key=1516975535684&lq=1&COUNTER"
+# # Karnataka, Banglore
+# Karnataka_Banglore = "http://117.192.41.101:81/jpgmulreq/1/image.jpg?key=1516975535684&lq=1&COUNTER"
 
-# Spain,Barcelona
-Spain_Barcelona = "http://210.136.243.194:82/cgi-bin/camera?resolution=640&amp;quality=1&amp;Language=0&amp;1629968232"
+# # Spain,Barcelona
+# Spain_Barcelona = "http://210.136.243.194:82/cgi-bin/camera?resolution=640&amp;quality=1&amp;Language=0&amp;1629968232"
 
-#	Switzerland, 	Basel.
-Switzerland_Basel = "http://31.164.218.109:50001/axis-cgi/mjpg/video.cgi?camera=&resolution=640x480"
-# Source = Indonesia_Bekasi
-i = 0
+# #	Switzerland, 	Basel.
+# Switzerland_Basel = "http://31.164.218.109:50001/axis-cgi/mjpg/video.cgi?camera=&resolution=640x480"
+# # Source = Indonesia_Bekasi
+
 def Run_Obj_Detect(Source):
         frames = run(weights='yolov5s.pt',  # model.pt path(s)
                 source=Source,  # file/dir/URL/glob, 0 for webcam
@@ -37,7 +37,7 @@ def Run_Obj_Detect(Source):
                 save_txt=False,  # save results to *.txt
                 save_conf=False,  # save confidences in --save-txt labels
                 save_crop=False,  # save cropped prediction boxes
-                nosave=False,  # do not save images/videos
+                nosave=True,  # do not save images/videos
                 classes=None,  # filter by class: --class 0, or --class 0 2 3
                 agnostic_nms=False,  # class-agnostic NMS
                 augment=False,  # augmented inference
