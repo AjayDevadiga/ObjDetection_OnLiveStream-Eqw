@@ -1,6 +1,7 @@
 ﻿-f https://download.pytorch.org/whl/torch_stable.html
 torch==1.9.0+cpu
 torchvision==0.10.0+cpu
+waitress
 absl-py==0.13.0
 cachetools==4.2.2
 certifi==2021.5.30
